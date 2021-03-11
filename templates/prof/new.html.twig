@@ -1,0 +1,7 @@
+{% extends 'navbar/navbarecole.html.twig' %}
+    {% form_theme formProf 'bootstrap_4_layout.html.twig' %}
+
+    {% block nav %}
+    {{parent()}}
+        {{ form(formProf) }} 
+    {% endblock %}

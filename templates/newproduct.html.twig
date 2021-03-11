@@ -1,0 +1,9 @@
+{# /templates/newproduct.html.twig #}
+{% extends 'navbar.html.twig' %}
+    {% form_theme formulaireNewProduct 'bootstrap_4_layout.html.twig' %}
+
+
+{% block nav %}
+    {{parent()}}
+    {{ form(formulaireNewProduct) }} 
+{% endblock %}

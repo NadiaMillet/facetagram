@@ -1,0 +1,24 @@
+{% extends 'navbar.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+<link href="{{asset('/css/theme.css')}}" rel="stylesheet" media="all">    
+{% endblock %}
+{% block nav %}
+    {{ parent() }}
+<br/>
+<br/>
+    <h1>Mes contacts</h1>
+<ul>
+    {% for contact in contacts %} {# contacts correspond à $contacts dans public function show dans le formcontroller récupérant les donnés de la BDD #}
+    <br/>
+        <li>{{ contact.nom | upper }}</li>
+        <li>{{ contact.prenom}}</li>
+        <li>{{ contact.societe }}</li>
+        <hr/>
+    {% endfor %}
+</ul>
+<br/>
+
+
+{% endblock %}    

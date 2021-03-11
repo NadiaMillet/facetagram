@@ -1,0 +1,9 @@
+{# /templates/newclient.html.twig #}
+{% extends 'navbar.html.twig' %}
+    {% form_theme formulaireNewClient 'bootstrap_4_layout.html.twig' %}
+
+
+{% block nav %}
+    {{parent()}}
+    {{ form(formulaireNewClient) }} 
+{% endblock %}

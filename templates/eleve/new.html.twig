@@ -1,0 +1,7 @@
+{% extends 'navbar/navbarecole.html.twig' %}
+    {% form_theme formEleve 'bootstrap_4_layout.html.twig' %}
+
+    {% block nav %}
+    {{parent()}}
+        {{ form(formEleve) }} 
+    {% endblock %}

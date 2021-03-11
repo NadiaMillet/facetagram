@@ -1,0 +1,9 @@
+{# /templates/contact.html.twig #}
+{% extends 'navbar.html.twig' %}
+    {% form_theme monFormulaire 'bootstrap_4_layout.html.twig' %}
+
+    {% block nav %}
+    {{parent()}}
+        {{ form(monFormulaire) }} 
+    {% endblock %}
+  
